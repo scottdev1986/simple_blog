@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-    <title>Simple Blog | Scott K</title>
+    <title>Simple Blog | Scott Kellar</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
         </div>
         <div class="navbar navbar-dark bg-dark shadow-sm">
           <div class="container">
-            <a href="#" class="navbar-brand d-flex align-items-center">
+            <a href="{% url 'blog' %}" class="navbar-brand d-flex align-items-center">
               <strong>Simple Blog</strong>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
