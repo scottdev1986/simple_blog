@@ -7,7 +7,7 @@
         <h1>{{post.title}}</h1>
         <p>By {{post.author}}</p>
         <p><small>{{post.published_date | naturaltime }}</small></p>
-        <p>{{post.body}}</p>
+        <p>{{post.body|safe}}</p>
     </div>
 </div>
 {% endblock %}
