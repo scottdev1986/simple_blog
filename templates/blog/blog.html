@@ -10,8 +10,13 @@
             <div class="row">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <p class="card-text"><strong>{{ post.title|truncatewords:5 }}</strong></p>
-                        <p class="card-text">{{ post.body|truncatechars:300 }}</p>
+                        <div class="container">
+                            {% if post.photo %}
+                            <img class="border" src="{{ post.photo.url }}" alt="{{ post.title|truncatewords:5 }}" style="width:100%;max-width:400px">
+                            {% endif %}
+                        </div>
+                        <h2 class="card-text">{{ post.title|truncatewords:5 }}</h2>
+                        <p class="card-text">{{ post.body|truncatechars_html:200|safe }}</p>
                         <p class="card-text">By {{ post.author }}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
@@ -24,7 +29,9 @@
             </div>
             {% endfor %}
             {% else %}
-            <p>No Blog posts</p>
+            <div class="col-md12">
+                <p>No Blog posts</p>
+            </div>
             {% endif %}
         </div>
     </div>
