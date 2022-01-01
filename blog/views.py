@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, render
 from .models import Article
 
 def blog(request):
-    posts = Article.objects.order_by('published_date').filter(is_published=True)
+    posts = Article.objects.order_by('-published_date').filter(is_published=True)
 
     context = {
         'posts' : posts
