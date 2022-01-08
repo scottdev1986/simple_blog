@@ -13,9 +13,8 @@
 <div class="album py-5 bg-light">
     <div class="container d-flex justify-content-between align-items-center">
         {% if posts %}
-        {% for post in posts %}
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="row">
+            {% for post in posts %}
                 <div class="card shadow-sm">
                     <div class="card-body">
                         <div class="container">
@@ -35,9 +34,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
         {% else %}
         <p>No Blog posts</p>
         {% endif %}
