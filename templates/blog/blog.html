@@ -35,14 +35,14 @@
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-            {% else %}
-            <div class="col-md12">
-                <p>No Blog posts</p>
-            </div>
-            {% endif %}
         </div>
+        {% else %}
+        <div class="col-md12">
+            <p>No Blog posts</p>
+        </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
