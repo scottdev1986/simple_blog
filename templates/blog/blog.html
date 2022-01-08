@@ -17,12 +17,12 @@
             {% for post in posts %}
                 <div class="card shadow-sm">
                     <div class="card-body">
+                        {% if post.photo %}
                         <div class="container">
-                            {% if post.photo %}
                             <img class="border" src="{{ post.photo.url }}" alt="{{ post.title|truncatewords:5 }}"
                                 style="width:100%;max-width:400px">
-                            {% endif %}
-                        </div>
+                            </div>
+                        {% endif %}
                         <h2 class="card-text">{{ post.title|truncatewords:5 }}</h2>
                         <p class="card-text">{{ post.body|truncatechars_html:200|safe }}</p>
                         <p class="card-text">By {{ post.author }}</p>
