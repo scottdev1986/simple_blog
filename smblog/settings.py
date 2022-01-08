@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'smblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
+        'NAME': 'name', # config('DB_NAME'),
+        'USER': 'name', #config('DB_USER'),
+        'PASSWORD': 'name', #config('DB_PASSWORD'),
+        'HOST': 'name', #config('DB_HOST'),
+        'PORT': 'name', #config('DB_PORT'),
     }
 }
 
