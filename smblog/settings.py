@@ -84,7 +84,6 @@ DATABASES = {
         'USER': 'name', #config('DB_USER'),
         'PASSWORD': 'name', #config('DB_PASSWORD'),
         'HOST': 'name', #config('DB_HOST'),
-        'PORT': 'name', #config('DB_PORT'),
     }
 }
 
